@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DIT Online Test</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Login Page -->
+  <div id="login-page" class="page">
+    <h2>Login to Start the Test</h2>
+    <form id="login-form">
+      <input type="text" id="username" placeholder="Enter your name" required>
+      <input type="password" id="password" placeholder="Enter password" required>
+      <button type="submit">Login</button>
+    </form>
+    <p id="login-error" class="error"></p>
+  </div>
+
+  <!-- Quiz Page -->
+  <div id="quiz-page" class="page hidden">
+    <h2>DIT Online Test</h2>
+    <div id="timer">Time Left: <span id="time">20:00</span></div>
+    <form id="quiz-form"></form>
+    <button id="submit-btn">Submit Test</button>
+  </div>
+
+  <!-- Result Page -->
+  <div id="result-page" class="page hidden">
+    <h2>Test Result</h2>
+    <p id="score"></p>
+    <p id="percentage"></p>
+    <p id="status"></p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

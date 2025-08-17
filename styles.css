@@ -1,0 +1,77 @@
+/* ===== Reset & Base ===== */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #0f172a;
+  background: linear-gradient(135deg, #f6f8fc, #eef2ff);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+.site-header, .site-footer {
+  background: #111827;
+  color: #fff;
+  text-align: center;
+  padding: 14px 16px;
+}
+.site-header h1 { margin: 0; font-weight: 800; letter-spacing: .3px; }
+
+.card {
+  width: min(980px, 94vw);
+  margin: 22px auto;
+  background: #fff;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 10px 28px rgba(0,0,0,.08);
+}
+
+.hidden { display: none; }
+.muted { color: #6b7280; }
+.error { color: #b91c1c; margin-top: 10px; }
+
+/* Form */
+.form-row { display: grid; gap: 6px; margin: 12px 0; }
+label { font-weight: 700; }
+input[type="text"], input[type="password"] {
+  padding: 12px 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 16px;
+  outline: none;
+}
+input:focus { border-color: #6366f1; box-shadow: 0 0 0 4px rgba(99,102,241,.15); }
+
+.btn {
+  cursor: pointer;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 16px;
+  background: #e5e7eb;
+}
+.btn.primary { background: #4f46e5; color: #fff; }
+.btn:active { transform: translateY(1px); }
+.actions { display: flex; gap: 10px; justify-content: flex-end; margin-top: 16px; flex-wrap: wrap; }
+
+.quiz-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.meta { display: flex; gap: 10px; align-items: center; }
+.pill { font-weight: 700; padding: 6px 10px; border-radius: 999px; background: #f3f4f6; }
+
+.question-list { list-style: decimal; padding-inline-start: 20px; display: grid; gap: 16px; }
+.question { padding: 14px; border: 1px solid #e5e7eb; border-radius: 14px; background: #fafafa; }
+.question h3 { margin: 0 0 8px 0; font-size: 18px; }
+.options { display: grid; gap: 8px; margin-top: 8px; }
+.option {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 8px;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+}
+.option:hover { background: #f3f4f6; }
+.option input[type="radio"] { accent-color: #4f46e5
